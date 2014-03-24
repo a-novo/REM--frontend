@@ -1,0 +1,161 @@
+// text > layout > color
+
+// .selector {
+//   Positioning
+//   Box model
+//   Typographic
+//   Visual
+//   Misc
+// }
+
+// ====
+
+.nav--global {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+
+  width: 100%;
+  height: 48px;
+  padding: 0 2%;
+  // overflow: hidden;
+
+  background: $color-primary;
+  @include clearfix;
+
+  a {
+    text-align: center;
+  }
+}
+
+.nav--button-tabs {
+  height: 100%;
+  float: left;
+  position: relative;
+
+  ul {
+    display: block;
+    height: 100%;
+    // width: 50%;
+    // margin: auto;
+
+    @include clearfix;
+  }
+
+  li {
+    display: inline;
+    display: inline-block;
+    // float: left;
+
+    &+li {
+      margin-left: 12px;
+      // background: red;
+    }
+  }
+}
+
+
+.nav--button-drop-down {
+  // background: shade($color-primary, 15%);
+
+  height: 100%;
+  width: 100px;
+  // width: auto;
+  float: right;
+  // display: inline-block;
+  position: relative;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+
+  .drop-down {
+    position: absolute;
+    top: 42px;
+
+    display: none;
+    width: 100%;
+
+    border-radius: 5px;
+    box-shadow:
+      0 6px 12px rgba(0,0,0,0.24),
+      0 0 0 1px rgba(0,0,0,0.06)
+    ;
+
+    background: #fff;
+
+    &:before {;
+      content: '';
+      position: absolute;
+      top: -14px;
+      right: 0;
+      left: 0;
+
+      display: block;
+      margin: auto;
+
+      @include triangle(14px, #fff, up);
+    }
+
+  }
+
+  .anchor {
+    font-size: 12px;
+    color: #fff;
+    color: rgba(#fff, 0.80);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  li {
+    // padding: 12px 18px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  a {
+
+    display: block;
+    height: 100%;
+    // width: 100%;
+    color: rgba($color-accent-dark, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+
+    padding: 14px 20px;
+
+    &:hover {
+      color: rgba($color-accent-dark, 1.0);
+    }
+  }
+
+
+  a:hover + ul {
+    display: block;
+    // background: #000;
+  }
+  ul:hover {
+    display: block;
+  }
+
+}
+
+// headroom.js styles
+
+.headroom {
+  -webkit-transform:translateZ(0px);
+  @include transition(top .5s ease);
+}
+
+.headroom--unpinned {
+  top: -50px;
+  // position: fixed;
+}
+
+.headroom--pinned {
+  top: 0;
+  // position: fixed;
+}
+
+// .headroom--top {}
+// .headroom--not-top {}

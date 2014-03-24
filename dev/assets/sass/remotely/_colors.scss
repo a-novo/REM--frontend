@@ -1,3 +1,9 @@
-$color-primary: #c5544e;
-$color-secondary: #c5544e;
-$color-accent: #c5544e;
+$color-primary    : #e5544c; // brand red
+$color-secondary  : #000;    // light red
+
+$color-accent          : #59c8e0; // blue
+$color-accent-dark     : darken($color-accent, 50%); // blue dark
+// $color-accent          : #59c8e0; // blue medium
+
+$color-success    : #6f9c55; // green
+$color-error      : #000; // red

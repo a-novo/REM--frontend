@@ -1,0 +1,41 @@
+// Import Neat helpers
+@import 'neat/neat-helpers';
+
+// Neat
+// Variables
+$border-box-sizing        : true;
+$default-feature          : min-width;
+$default-layout-direction : LTR;
+
+// Visual grid settings
+$visual-grid-color        : #4083FA;
+$visual-grid-opacity      : 0.1;
+$visual-grid-index        : front;
+// $visual-grid              : true;
+
+// Change the grid settings
+// $column         : 90px;
+// $gutter         : 30px;
+$grid-columns   : 12;
+// $max-width      : em(1280);
+
+// Define your breakpoints
+// $tablet  : new-breakpoint(max-width ($column * 8) 8);
+
+
+$tablet-landscape  : new-breakpoint(max-width 1200px 12);
+$desktop           : new-breakpoint(min-width 1024px 12);
+$tablet-portrait   : new-breakpoint(max-width 768px 12);
+$mobile            : new-breakpoint(max-width 480px 4);
+
+
+// Typecsset
+// Baseline grid setup
+// $typecsset-base-font-size:      16px;
+// $typecsset-base-line-height:    24px;
+// $typecsset-show-baseline:       true;
+
+// ====
+
+// $typecsset-show-baseline : true;
+// $visual-grid             : true;
