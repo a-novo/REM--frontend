@@ -29,9 +29,11 @@
 }
 
 .nav--button-tabs {
-  height: 100%;
   float: left;
   position: relative;
+
+  height: 100%;
+  padding-left: 24%;
 
   ul {
     display: block;
@@ -43,14 +45,37 @@
   }
 
   li {
-    display: inline;
+    // display: inline;
     display: inline-block;
     // float: left;
+    height: 100%;
 
     &+li {
-      margin-left: 12px;
+      // margin-left: 12px;
       // background: red;
     }
+
+    &.active {
+      padding-top: em(6);
+
+      a {
+        background: shade($color-primary, 20%);
+      }
+    }
+  }
+
+  a {
+    display: block;
+
+    height: 100%;
+    width: 100%;
+    // margin-top: em(12);
+    padding: em(10) em(10) ;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: em(14);
+    color: white
   }
 }
 
