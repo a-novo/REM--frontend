@@ -406,14 +406,16 @@ body {
   padding-left: 180px;
   overflow-x: hidden;
   background: #fff; }
-  .page--content > #content > .module {
+  .page--content .module {
     margin: 2.35765%;
     float: left; }
 
-#content:after {
-  content: "";
-  display: table;
-  clear: both; }
+.content {
+  padding: 2.35765%; }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .module--a {
   width: 800px;
