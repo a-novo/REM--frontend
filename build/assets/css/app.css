@@ -406,9 +406,14 @@ body {
   padding-left: 180px;
   overflow-x: hidden;
   background: #fff; }
-  .page--content > .module {
+  .page--content > #content > .module {
     margin: 2.35765%;
     float: left; }
+
+#content:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .module--a {
   width: 800px;
@@ -446,7 +451,10 @@ h1, .h1 {
   width: 100%;
   height: 48px;
   padding: 0 2%;
-  background: #e5544c; }
+  background: #e5544c no-repeat;
+  background-image: url("../svg/remotely-logo-white-01.svg");
+  background-position: 1% center;
+  background-size: auto 65%; }
   .nav--global:after {
     content: "";
     display: table;
@@ -544,6 +552,9 @@ h1, .h1 {
 .headroom--pinned {
   top: 0; }
 
+.svg-sprite.hide {
+  display: none; }
+
 .nav--local {
   z-index: 9997;
   position: absolute;
@@ -555,31 +566,31 @@ h1, .h1 {
   padding-top: 48px;
   border-right: 1px solid #cccccc;
   background: #F0F0F0; }
-  .nav--local ul {
-    position: relative;
-    background: #F0F0F0; }
-    .nav--local ul:after {
+  .nav--local .nav--tooltip {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 8px;
+    border-right-color: #cccccc; }
+    .nav--local .nav--tooltip:before {
       content: '';
       position: absolute;
-      right: -1px;
-      top: 43px;
+      top: -8px;
+      left: -7px;
       height: 0;
       width: 0;
       border-color: transparent;
       border-style: solid;
       border-width: 8px;
       border-right-color: white; }
-    .nav--local ul:before {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 43px;
-      height: 0;
-      width: 0;
-      border-color: transparent;
-      border-style: solid;
-      border-width: 8px;
-      border-right-color: #cccccc; }
+  .nav--local ul {
+    position: relative;
+    background: #F0F0F0; }
   .nav--local li {
     position: relative;
     width: 100%;
@@ -587,29 +598,50 @@ h1, .h1 {
     border-top: 1px solid #cccccc; }
     .nav--local li:last-child {
       border-bottom: 1px solid #cccccc; }
-    .nav--local li:hover {
-      background: #e6e6e6; }
-      .nav--local li:hover svg {
-        fill: black;
-        stroke: transparent; }
-  .nav--local .icon-svg {
-    top: 25%;
-    left: 0;
-    right: 0;
-    margin: 1.125em auto 0.5em auto;
-    padding: 0;
-    width: 2em;
-    height: 2em; }
-    .nav--local .icon-svg svg {
-      fill: transparent;
-      stroke: #e5544c;
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out; }
-  .nav--local .label {
+  .nav--local .anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
     font-size: 0.875em;
+    color: black;
     text-align: center;
-    margin: 0; }
+    text-decoration: none;
+    overflow: hidden; }
+    .nav--local .anchor .label {
+      color: #e5544c;
+      margin: 0; }
+    .nav--local .anchor .icon--stroke {
+      fill: #e5544c; }
+    .nav--local .anchor .icon--filled {
+      opacity: 0;
+      fill: #e5544c; }
+    .nav--local .anchor:hover {
+      background: rgba(255, 255, 255, 0.5); }
+      .nav--local .anchor:hover .icon--stroke {
+        opacity: 0; }
+      .nav--local .anchor:hover .icon--filled {
+        opacity: 1; }
+    .nav--local .anchor.active .label {
+      color: #000; }
+    .nav--local .anchor.active .icon--stroke {
+      opacity: 0; }
+    .nav--local .anchor.active .icon--filled {
+      opacity: 1;
+      fill: #000; }
+  .nav--local .icon-box {
+    position: relative;
+    width: 100%;
+    height: 65%; }
+  .nav--local .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    width: 52px;
+    height: 52px; }
   .nav--local .ui--dropdown {
     display: block;
     height: 48px;

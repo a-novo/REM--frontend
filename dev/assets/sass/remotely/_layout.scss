@@ -62,12 +62,14 @@ body {
   background: #fff;
   // background: tint(skyblue, 80%);
 
-  > .module {
+  > #content > .module {
     margin: flex-gutter();
     float: left;
     // max-width: 100%;
   }
 }
+
+#content {@include clearfix;}
 
 // =========
 

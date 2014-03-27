@@ -58,6 +58,32 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/build\/residents-dashboard.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/residents-dashboard.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/build\/residents-list.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/residents-list.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/assets\/js\/_plugins\/ajaxify-html5.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/assets\/js\/_plugins\/ajaxify-html5.js",
+		"outputAbbreviatedPath": "\/build\/assets\/js\/_plugins\/ajaxify-html5.min.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
 	"\/dev\/assets\/js\/_plugins\/headroom.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -78,12 +104,32 @@
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
+	"\/dev\/assets\/js\/_plugins\/jquery.history.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/assets\/js\/_plugins\/jquery.history.js",
+		"outputAbbreviatedPath": "\/build\/assets\/js\/_plugins\/jquery.history.min.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
 	"\/dev\/assets\/js\/_plugins\/jquery.scroll_perf.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/assets\/js\/_plugins\/jquery.scroll_perf.js",
 		"outputAbbreviatedPath": "\/build\/assets\/js\/_plugins\/jquery.scroll_perf.min.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
+	"\/dev\/assets\/js\/_plugins\/jquery.transit.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/assets\/js\/_plugins\/jquery.transit.js",
+		"outputAbbreviatedPath": "\/build\/assets\/js\/_plugins\/jquery.transit.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
@@ -294,6 +340,40 @@
 		"inputAbbreviatedPath": "\/dev\/partials\/_nav-bar.kit",
 		"outputAbbreviatedPath": "\/build\/partials\/_nav-bar.html",
 		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/partials\/_nav-local.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/partials\/_nav-local.kit",
+		"outputAbbreviatedPath": "\/build\/partials\/_nav-local.html",
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/residents-dashboard.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/residents-dashboard.kit",
+		"outputAbbreviatedPath": "\/build\/residents-dashboard.html",
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/residents-list.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/residents-list.kit",
+		"outputAbbreviatedPath": "\/build\/residents-list.html",
+		"outputPathIsSetByUser": 0
+		},
+	"\/Gruntfile.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/Gruntfile.js",
+		"outputAbbreviatedPath": "\/Gruntfile.min.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 0
 		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
@@ -888,7 +968,7 @@
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 1,
 	"shouldRunBless": 0,
-	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs",
+	"skippedItemsString": "_cache, logs, \/node_modules, _logs, cache, .git, log, .svn, .hg",
 	"slimAutoOutputPathRelativePath": "",
 	"slimAutoOutputPathReplace1": "",
 	"slimAutoOutputPathReplace2": "",

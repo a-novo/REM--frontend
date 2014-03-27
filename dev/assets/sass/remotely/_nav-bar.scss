@@ -20,7 +20,11 @@
   padding: 0 2%;
   // overflow: hidden;
 
-  background: $color-primary;
+  background: $color-primary no-repeat;
+  background-image: url('../svg/remotely-logo-white-01.svg');
+  background-position: 1% center;
+  background-size: auto 65%;
+
   @include clearfix;
 
   a {
