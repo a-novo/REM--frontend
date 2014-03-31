@@ -1,0 +1,120 @@
+%radius {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+// =========
+
+%text-label {
+  width: 100%;
+  margin: 0;
+
+  font-size: em(12);
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  color: #898989;
+}
+
+%text-value {
+  margin: em(8) 0;
+
+  font-size: em(16);
+  text-transform: capitalize;
+
+  color: #000;
+}
+
+$border-style : 1px solid $color-border;
+
+.module--list-item {
+  // $module-color-border : $color-border;
+  // $module-color-text-label : ;
+  // $module-color-background : ;
+
+  @include span-columns(10);
+  @include row(table);
+
+  @extend %radius;
+
+  .top {
+    @include span-columns(3 of 10);
+    padding: 0 ;
+  }
+
+  .bottom {
+    @include span-columns(7 of 10);
+    padding: 0 ;
+  }
+
+
+  .col {
+    // @include span-columns(2);
+    @include pad(1em);
+  }
+  // .name {}
+
+  .status {
+    border-top: $border-style;
+    border-right: $border-style;
+
+    @extend %text-sub-label;
+
+    margin: 0;
+    background: skyblue;
+    text-align: center;
+    // color: white;
+    // font-size: em(14);
+    a {
+      // font-size: em(14);
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+    // p {background: skyblue;}
+  }
+
+  .lease {
+    background: whitesmoke;
+    border-top: $border-style;
+
+    @extend %text-sub-label;
+    text-align: left;
+    color: #898989;
+  }
+
+  .building {
+    @include span-columns(4);
+  }
+  .unit {
+    @include span-columns(2);
+  }
+  .automation {
+    @include span-columns(3);
+  }
+
+  .label {
+    @extend %text-label;
+  }
+  .value {
+    @extend %text-value;
+  }
+
+}
+
+%text-sub-label {
+  font-size: em(14);
+  padding: em(4);
+  height: em(32);
+  // text-align: center;
+  p {
+    // line-height: em(24);
+    // width: 90%;
+    margin: 0;
+    padding: em(2);
+    // text-align: center;
+  }
+}

@@ -17,6 +17,7 @@
 //   background-repeat: no-repeat;
 // }
 
+
 html,
 body {
   width: 100%;
@@ -63,18 +64,23 @@ body {
   // background: tint(skyblue, 80%);
 
   .module {
-    margin: flex-gutter();
     float: left;
+
+    // margin-top: flex-gutter();
+    margin-bottom: flex-gutter();
     // max-width: 100%;
+
+    border: 1px solid $color-border;
   }
 }
 
 .content {
   @include pad(default);
   @include clearfix;
+
+  @include outer-container;
 }
 
-// =========
 
 
 .module--a {

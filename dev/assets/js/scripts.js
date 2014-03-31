@@ -31,6 +31,8 @@
 
 
 // TODO:
+// betterify this function at some point
+
 var sideNavTooltip = function () {
   // body...
   var nav       = $('#nav--local');

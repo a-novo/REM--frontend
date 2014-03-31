@@ -374,6 +374,17 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+h1, .h1 {
+  color: #000; }
+
 html,
 body {
   width: 100%;
@@ -407,11 +418,19 @@ body {
   overflow-x: hidden;
   background: #fff; }
   .page--content .module {
-    margin: 2.35765%;
-    float: left; }
+    float: left;
+    margin-bottom: 2.35765%;
+    border: 1px solid #cccccc; }
 
 .content {
-  padding: 2.35765%; }
+  padding: 2.35765%;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both; }
   .content:after {
     content: "";
     display: table;
@@ -435,16 +454,87 @@ body {
   .module--f select {
     display: block; }
 
-html {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+.module--list-item {
+  border-radius: 5px;
+  overflow: hidden; }
 
-ul {
-  list-style: none;
+.module--list-item .label {
+  width: 100%;
   margin: 0;
-  padding: 0; }
+  font-size: 0.75em;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #898989; }
 
-h1, .h1 {
+.module--list-item .value {
+  margin: 0.5em 0;
+  font-size: 1em;
+  text-transform: capitalize;
   color: #000; }
+
+.module--list-item {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
+  .module--list-item:last-child {
+    margin-right: 0; }
+  .module--list-item:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .module--list-item .top {
+    display: table-cell;
+    padding-right: 1.89506%;
+    width: 29.90525%;
+    padding: 0; }
+  .module--list-item .bottom {
+    display: table-cell;
+    padding-right: 2.4365%;
+    width: 71.58373%;
+    padding: 0; }
+  .module--list-item .col {
+    padding: 1em; }
+  .module--list-item .status {
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    margin: 0;
+    background: skyblue;
+    text-align: center; }
+    .module--list-item .status a {
+      display: block;
+      color: white;
+      text-decoration: none; }
+  .module--list-item .lease {
+    background: whitesmoke;
+    border-top: 1px solid #cccccc;
+    text-align: left;
+    color: #898989; }
+  .module--list-item .building {
+    display: table-cell;
+    padding-right: 1.76824%;
+    width: 33.5298%; }
+  .module--list-item .unit {
+    display: table-cell;
+    padding-right: 1.17883%;
+    width: 15.88078%; }
+  .module--list-item .automation {
+    display: table-cell;
+    padding-right: 1.57177%;
+    width: 24.80353%; }
+
+.module--list-item .status, .module--list-item .lease {
+  font-size: 0.875em;
+  padding: 0.25em;
+  height: 2em; }
+  .module--list-item .status p, .module--list-item .lease p {
+    margin: 0;
+    padding: 0.125em; }
 
 .nav--global {
   position: fixed;
