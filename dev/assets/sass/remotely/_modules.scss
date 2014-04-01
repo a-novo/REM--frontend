@@ -1,3 +1,5 @@
+$border-style : 1px solid $color-border;
+
 %radius {
   border-radius: 5px;
   overflow: hidden;
@@ -28,15 +30,16 @@
   color: #000;
 }
 
-$border-style : 1px solid $color-border;
-
 .module--list-item {
   // $module-color-border : $color-border;
   // $module-color-text-label : ;
   // $module-color-background : ;
+  margin: 0;
 
   @include span-columns(10);
   @include row(table);
+
+  min-width: em(600);
 
   @extend %radius;
 
@@ -50,11 +53,12 @@ $border-style : 1px solid $color-border;
     padding: 0 ;
   }
 
-
   .col {
-    // @include span-columns(2);
+    @include span-columns(1);
     @include pad(1em);
   }
+
+  // .goto {}
   // .name {}
 
   .status {
@@ -68,13 +72,13 @@ $border-style : 1px solid $color-border;
     text-align: center;
     // color: white;
     // font-size: em(14);
+
     a {
       // font-size: em(14);
       display: block;
       color: white;
       text-decoration: none;
     }
-    // p {background: skyblue;}
   }
 
   .lease {
