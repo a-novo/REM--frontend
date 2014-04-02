@@ -468,6 +468,72 @@ body {
     width: 100%;
     height: 100%; }
 
+.ui--drop-down {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  color: #DDD; }
+  .ui--drop-down .anchor {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none; }
+  .ui--drop-down .drop-down {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    margin: auto;
+    display: none;
+    min-width: 100%;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    background: #fff; }
+    .ui--drop-down .drop-down:before, .ui--drop-down .drop-down:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -15px;
+      left: 10%;
+      margin: auto;
+      height: 0;
+      width: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 7px;
+      border-bottom-color: rgba(0, 0, 0, 0.2); }
+    .ui--drop-down .drop-down:after {
+      top: -14px;
+      height: 0;
+      width: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 7px;
+      border-bottom-color: white; }
+    .ui--drop-down .drop-down li {
+      border-bottom: 1px solid #ccc; }
+    .ui--drop-down .drop-down a {
+      white-space: nowrap;
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 14px;
+      color: rgba(9, 42, 49, 0.8); }
+      .ui--drop-down .drop-down a:hover {
+        color: #092a31; }
+  .ui--drop-down a:hover + ul {
+    display: block; }
+  .ui--drop-down ul:hover {
+    display: block; }
+
+.ui--list-sorting {
+  float: right; }
+
+.ui--sort-controls:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .module--list-item {
   border-radius: 5px;
   overflow: hidden; }
@@ -615,7 +681,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(0, 0, 0, 0.06);
     background: #fff; }
-    .nav--button-drop-down .drop-down:before {
+    .nav--button-drop-down .drop-down:before, .nav--button-drop-down .ui--drop-down .drop-down:after, .ui--drop-down .nav--button-drop-down .drop-down:after {
       content: '';
       position: absolute;
       top: -14px;
