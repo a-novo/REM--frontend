@@ -478,7 +478,7 @@ body {
     text-decoration: none; }
   .ui--drop-down .drop-down {
     position: absolute;
-    top: 28px;
+    top: 24px;
     right: -10px;
     margin: auto;
     display: none;
