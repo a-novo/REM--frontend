@@ -1,0 +1,48 @@
+// =========
+
+.nav--search {
+  position: relative;
+  // margin: 0;
+  // height: 49px;
+  height: em(49);
+  // border-bottom: 9px solid lighten(black, 80%);
+  // border-bottom: 9px solid red;
+  background: tint(#ccc, 50%);
+
+  border-top: 1px solid lighten(black, 80%);
+  border-bottom: 1px solid lighten(black, 80%);
+
+  &-field {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    margin: auto;
+    padding: em(14);
+
+    width: 98%;
+    height: 50%;
+
+    border: 1px solid tint(#ccc, 50%);
+    @extend %radius;
+
+    &:focus {
+      outline: none;
+      border: 1px solid tint(#ccc, 0%);
+    }
+  }
+}
+
+.nav--local-community-label {
+  // padding-top: 48px;
+  display: block;
+  height: 48px;
+  border-top: 1px solid lighten(black, 80%);
+
+  text-decoration: none;
+  color: black;
+
+  background: tint(#ccc, 50%);
+}

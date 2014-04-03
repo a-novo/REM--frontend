@@ -23,8 +23,8 @@
   .drop-down {
     position: absolute;
     top: 28px;
-    // right: 0;
-    left: 0;
+    right: -10px;
+    // left: 0;
     margin: auto;
 
     display: none;
@@ -45,7 +45,8 @@
       position: absolute;
       display: block;
       top: -15px;
-      left: 10%;
+      // left: 10%;
+      right: 10px;
 
       margin: auto;
 
@@ -105,4 +106,35 @@
 
 .ui--sort-controls {
   @include clearfix;
+
+  margin: em(14) em(2);
+
+  font-size: em(14);
+  color: tint(#000, 60%);
+}
+
+.ui--filter-tags {
+  padding: em(14) em(2);
+
+  font-size: em(12);
+  color: tint(#000, 60%);
+
+  span {
+    @extend %radius;
+
+    padding: em(4) 0 em(4) em(12);
+    background: tint($color-primary, 98%);
+    border: 1px solid tint($color-primary, 50%);
+
+    a {
+      display: inline-block;
+      @include size(16px);
+      text-align: center;
+      text-decoration: none;
+      color: tint($color-primary, 20%);
+      margin: 0 em(3);
+      // background: tint($color-primary, 20%);
+      border-radius: 50%;
+    }
+  }
 }

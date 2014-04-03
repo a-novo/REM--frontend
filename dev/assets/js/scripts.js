@@ -65,9 +65,9 @@ Number.prototype.clamp = function(min, max) {
     // console.log(scrollPos);
 
     if (event.scrollTop > 0) {
-      $('.nav--local').find('.ui--dropdown').css('background', 'none');
+      $('.nav--local').find('.nav--local-community-label').css('background', 'none');
     } else {
-      $('.nav--local').find('.ui--dropdown').css('background', '');
+      $('.nav--local').find('.nav--local-community-label').css('background', '');
     }
 
     updateTop();
@@ -120,7 +120,7 @@ var sideNavTooltip = function () {
   // body...
   var nav       = $('#nav--local');
   var navHeight = nav.height();
-  var tooltip   = nav.find('.nav--tooltip');
+  var tooltip   = nav.find('.nav--local-tooltip');
   var tooltipOffset   = tooltip.outerHeight() / 2;
 
   var currentPage       = $body.data('page');
