@@ -84,7 +84,7 @@
 		},
 	"\/dev\/assets\/js\/_plugins\/ajaxify-html5.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/assets\/js\/_plugins\/ajaxify-html5.js",
 		"outputAbbreviatedPath": "\/build\/assets\/js\/_plugins\/ajaxify-html5.min.js",
@@ -117,7 +117,7 @@
 		},
 	"\/dev\/assets\/js\/_plugins\/jquery.history.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/assets\/js\/_plugins\/jquery.history.js",
 		"outputAbbreviatedPath": "\/build\/assets\/js\/_plugins\/jquery.history.min.js",
@@ -383,15 +383,6 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
-		},
-	"\/dev\/index.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/index.kit",
-		"outputAbbreviatedPath": "\/build\/index.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/dev\/partials\/_doc-foot.kit": {
 		"fileType": 2048,
