@@ -1,0 +1,150 @@
+$border-style : 1px solid $color-border;
+
+%radius {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+// =========
+
+%text-label {
+  width: 100%;
+  margin: 0;
+
+  font-size: em(12);
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  color: #898989;
+}
+
+%text-value {
+  margin: em(8) 0;
+
+  font-size: em(16);
+  text-transform: capitalize;
+
+  color: #000;
+}
+
+.module--list-item {
+  // $module-color-border : $color-border;
+  // $module-color-text-label : ;
+  // $module-color-background : ;
+  margin: 0;
+
+  @include span-columns(10);
+  @include row(table);
+
+  min-width: em(600);
+
+  @extend %radius;
+
+  .top {
+    @include span-columns(3 of 10);
+    padding: 0 ;
+  }
+
+  .bottom {
+    position: relative;
+    @include span-columns(7 of 10);
+    padding: 0 ;
+  }
+
+  .col {
+    @include span-columns(1);
+    @include pad(1em);
+  }
+
+  .goto {
+    // position: relative;
+
+    // @include span-columns(1 of 7);
+    a {
+      position: absolute;
+      top: 24%;
+      // bottom: 0;
+
+      right: 5%;
+
+      margin: auto;
+      // float: right;
+      padding: 0;
+      display: block;
+      @include size(28);
+      border: solid black;
+      border-width: 2px 2px 0 0 ;
+
+      @include hide-text();
+
+      transform-origin:50%;
+      transform: rotate(45deg);
+      // -webkit-transform: rotate(45deg);
+    }
+  }
+  // .name {}
+
+  .status {
+    border-top: $border-style;
+    border-right: $border-style;
+
+    @extend %text-sub-label;
+
+    margin: 0;
+    background: skyblue;
+    text-align: center;
+    // color: white;
+    // font-size: em(14);
+
+    a {
+      // font-size: em(14);
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .lease {
+    background: whitesmoke;
+    border-top: $border-style;
+
+    @extend %text-sub-label;
+    text-align: left;
+    color: #898989;
+  }
+
+  .building {
+    @include span-columns(3 of 7);
+  }
+  .unit {
+    @include span-columns(1.5 of 7);
+  }
+  .automation {
+    @include span-columns(2 of 7);
+  }
+
+  .label {
+    @extend %text-label;
+  }
+  .value {
+    @extend %text-value;
+  }
+
+}
+
+%text-sub-label {
+  font-size: em(14);
+  padding: em(4);
+  height: em(32);
+  // text-align: center;
+  p {
+    // line-height: em(24);
+    // width: 90%;
+    margin: 0;
+    padding: em(2);
+    // text-align: center;
+  }
+}
