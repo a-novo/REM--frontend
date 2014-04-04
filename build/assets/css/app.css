@@ -179,6 +179,7 @@ figure {
  */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -287,6 +288,8 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -374,8 +377,10 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-html {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 16px; }
 
 ul {
   list-style: none;
@@ -447,11 +452,10 @@ body {
   border: 1px solid #ccc; }
 
 .module--f {
-  width: inherit;
-  background: #fff;
+  position: relative;
   height: 100%;
-  width: 100%;
-  position: relative; }
+  width: inherit;
+  background: #fff; }
   .module--f.module {
     padding: 0;
     border: 0; }
@@ -459,7 +463,8 @@ body {
     width: 100%; }
   .module--f select {
     display: block;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 0.75em; }
   .module--f .frame--inner {
     padding: 1em;
     padding-top: 3em;
@@ -485,6 +490,7 @@ body {
     min-width: 100%;
     width: auto;
     border-radius: 5px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
     background: #fff; }
     .ui--drop-down .drop-down:before, .ui--drop-down .drop-down:after {
@@ -598,6 +604,7 @@ body {
     width: 29.90525%;
     padding: 0; }
   .module--list-item .bottom {
+    position: relative;
     display: table-cell;
     padding-right: 2.4365%;
     width: 71.58373%;
@@ -607,6 +614,29 @@ body {
     padding-right: 0%;
     width: 6.17215%;
     padding: 1em; }
+  .module--list-item .goto a {
+    position: absolute;
+    top: 24%;
+    right: 5%;
+    margin: auto;
+    padding: 0;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: solid black;
+    border-width: 2px 2px 0 0;
+    overflow: hidden;
+    -webkit-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+    .module--list-item .goto a:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%; }
   .module--list-item .status {
     border-top: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
@@ -624,16 +654,16 @@ body {
     color: #898989; }
   .module--list-item .building {
     display: table-cell;
-    padding-right: 1.76824%;
-    width: 33.5298%; }
+    padding-right: 2.74061%;
+    width: 43.24866%; }
   .module--list-item .unit {
     display: table-cell;
-    padding-right: 1.17883%;
-    width: 15.88078%; }
+    padding-right: 1.37031%;
+    width: 19.56887%; }
   .module--list-item .automation {
     display: table-cell;
-    padding-right: 1.57177%;
-    width: 24.80353%; }
+    padding-right: 2.05546%;
+    width: 27.69052%; }
 
 .module--list-item .status, .module--list-item .lease {
   font-size: 0.875em;
@@ -649,10 +679,10 @@ body {
   z-index: 9999;
   width: 100%;
   height: 48px;
-  padding: 0 2%;
   background: #e5544c no-repeat;
   background-image: url("../svg/remotely-logo-white-01.svg");
   background-position: 1% center;
+  -webkit-background-size: auto 65%;
   background-size: auto 65%; }
   .nav--global:after {
     content: "";
@@ -701,6 +731,7 @@ body {
     display: none;
     min-width: 100%;
     overflow: visible;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(0, 0, 0, 0.06);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(0, 0, 0, 0.06);
     background: #fff; }
     .nav--button-drop-down .drop-down:before, .nav--button-drop-down .ui--drop-down .drop-down:after, .ui--drop-down .nav--button-drop-down .drop-down:after {
@@ -743,7 +774,6 @@ body {
 .headroom {
   -webkit-transform: translateZ(0px);
   -webkit-transition: top 0.5s ease;
-  -moz-transition: top 0.5s ease;
   transition: top 0.5s ease; }
 
 .headroom--unpinned {
@@ -871,5 +901,13 @@ body {
   text-decoration: none;
   color: black;
   background: #e5e5e5; }
+  .nav--local-community-label a {
+    display: block;
+    margin-top: 1.0625em;
+    font-size: 0.875em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #191919; }
 
 /*# sourceMappingURL=app.css.map */

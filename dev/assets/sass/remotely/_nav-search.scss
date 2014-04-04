@@ -45,4 +45,14 @@
   color: black;
 
   background: tint(#ccc, 50%);
+
+  a {
+    display: block;
+    margin-top: em(17) ;
+    font-size: em(14);
+    font-weight:bold;
+    text-align: center;
+    text-decoration: none;
+    color: tint(#000, 10%);
+  }
 }

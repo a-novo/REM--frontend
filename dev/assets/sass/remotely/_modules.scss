@@ -49,6 +49,7 @@ $border-style : 1px solid $color-border;
   }
 
   .bottom {
+    position: relative;
     @include span-columns(7 of 10);
     padding: 0 ;
   }
@@ -58,7 +59,32 @@ $border-style : 1px solid $color-border;
     @include pad(1em);
   }
 
-  // .goto {}
+  .goto {
+    // position: relative;
+
+    // @include span-columns(1 of 7);
+    a {
+      position: absolute;
+      top: 24%;
+      // bottom: 0;
+
+      right: 5%;
+
+      margin: auto;
+      // float: right;
+      padding: 0;
+      display: block;
+      @include size(28);
+      border: solid black;
+      border-width: 2px 2px 0 0 ;
+
+      @include hide-text();
+
+      transform-origin:50%;
+      transform: rotate(45deg);
+      // -webkit-transform: rotate(45deg);
+    }
+  }
   // .name {}
 
   .status {
@@ -91,13 +117,13 @@ $border-style : 1px solid $color-border;
   }
 
   .building {
-    @include span-columns(4);
+    @include span-columns(3 of 7);
   }
   .unit {
-    @include span-columns(2);
+    @include span-columns(1.5 of 7);
   }
   .automation {
-    @include span-columns(3);
+    @include span-columns(2 of 7);
   }
 
   .label {

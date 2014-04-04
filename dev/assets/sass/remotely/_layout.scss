@@ -108,6 +108,7 @@ body {
   border: 1px solid #ccc;
 }
 
+
 .module--f {
   &.module {
     padding: 0;
@@ -115,15 +116,13 @@ body {
     // margin: 0;
   }
 
-  // margin: 0 auto;
-  width: inherit;
-
-  background: #fff;
-  height: 100%;
-  width: 100%;
   position: relative;
-  // padding: 20px;
-  // width: 60px;
+
+  height: 100%;
+  // width: 100%;
+  width: inherit;
+  background: #fff;
+
   // border-right: 1px solid #ccc;
   form {
     width: 100%;
@@ -131,6 +130,7 @@ body {
   select {
     display: block;
     width: 100%;
+    margin-bottom: em(12);
   }
   // position: fixed;
   // top: 0;
