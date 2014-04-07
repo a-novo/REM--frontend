@@ -455,12 +455,14 @@ body {
   position: relative;
   height: 100%;
   width: inherit;
-  background: #fff; }
+  background: #fff;
+  overflow-x: hidden; }
   .module--f.module {
     padding: 0;
     border: 0; }
   .module--f form {
     width: 100%; }
+  .module--f input,
   .module--f select {
     display: block;
     width: 100%;
@@ -486,6 +488,7 @@ body {
     top: 24px;
     right: -10px;
     margin: auto;
+    z-index: 100;
     display: none;
     min-width: 100%;
     width: auto;
@@ -623,7 +626,7 @@ body {
     display: block;
     width: 28px;
     height: 28px;
-    border: solid black;
+    border: solid #cccccc;
     border-width: 2px 2px 0 0;
     overflow: hidden;
     -webkit-transform-origin: 50%;

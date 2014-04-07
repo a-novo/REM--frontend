@@ -123,10 +123,13 @@ body {
   width: inherit;
   background: #fff;
 
+  overflow-x: hidden;
+
   // border-right: 1px solid #ccc;
   form {
     width: 100%;
   }
+  input,
   select {
     display: block;
     width: 100%;
