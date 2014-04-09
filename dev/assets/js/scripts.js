@@ -131,23 +131,28 @@ var uiTabSection = function (argument) {
 
       $tabs.children('a').each(function(index) {
         $(this).on('click', function () {
-          event.preventDefault();
+          var $this = $(this);
 
-          var tabIndex = index;
+          if (!$this.parent().hasClass('active')) {
+            event.preventDefault();
+            var tabIndex = index;
 
-          $tabs.removeClass('active');
-          $(this).parent().addClass('active');
+            $tabs.removeClass('active');
+            $this.parent().addClass('active');
 
-          $sections.each(function (index) {
-            var $this = $(this);
-            var sectionIndex = index;
+            $sections.each(function (index) {
+              var $this = $(this);
+              var sectionIndex = index;
 
-            if (sectionIndex === tabIndex) {
-              $this.addClass('open');
-            } else {
-              $this.removeClass('open');
-            }
-          });
+              if (sectionIndex === tabIndex) {
+                $this.addClass('open');
+              } else {
+                $this.removeClass('open');
+              }
+            });
+          } else {
+            event.preventDefault();
+          }
 
         });
       });
