@@ -123,22 +123,22 @@ var uiTabSection = function (argument) {
   if (module.length) {
     module.each(function (index) {
 
-      var tabs = $(this).find('ul > li');
-      var sections = $(this).find('section');
+      var $tabs = $(this).find('ul > li');
+      var $sections = $(this).find('section');
 
-      tabs.first().addClass('active');
-      sections.first().addClass('open');
+      $tabs.first().addClass('active');
+      $sections.first().addClass('open');
 
-      tabs.children('a').each(function(index) {
+      $tabs.children('a').each(function(index) {
         $(this).on('click', function () {
           event.preventDefault();
 
           var tabIndex = index;
 
-          tabs.removeClass('active');
+          $tabs.removeClass('active');
           $(this).parent().addClass('active');
 
-          sections.each(function (index) {
+          $sections.each(function (index) {
             var $this = $(this);
             var sectionIndex = index;
 
