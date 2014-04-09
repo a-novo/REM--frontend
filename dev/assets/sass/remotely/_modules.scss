@@ -22,7 +22,7 @@ $border-style : 1px solid $color-border;
 }
 
 %text-value {
-  margin: em(8) 0;
+  margin: 0;
 
   font-size: em(16);
   text-transform: capitalize;
@@ -30,28 +30,42 @@ $border-style : 1px solid $color-border;
   color: #000;
 }
 
+// =========
+
+// TODO:
+// change that "name" container
+
 .module--list-item {
+  #name {
+    @include span-columns(12);
+    @include row(table);
+    // @include outer-container;
+  }
   // $module-color-border : $color-border;
   // $module-color-text-label : ;
   // $module-color-background : ;
-  margin: 0;
+  // margin: 0;
 
-  @include span-columns(10);
-  @include row(table);
+@include outer-container;
+  // @include span-columns(12);
+  // @include row(table);
 
-  min-width: em(600);
+  // min-width: em(600);
 
   @extend %radius;
 
   .top {
-    @include span-columns(3 of 10);
-    padding: 0 ;
+    @include span-columns(4);
+    padding: 0;
+    @include omega();
   }
 
   .bottom {
     position: relative;
-    @include span-columns(7 of 10);
-    padding: 0 ;
+    @include span-columns(8 of 12);
+    padding: 0;
+    @include reset-display;
+
   }
 
   .col {
@@ -61,8 +75,9 @@ $border-style : 1px solid $color-border;
 
   .goto {
     // position: relative;
-
-    // @include span-columns(1 of 7);
+    padding: 0;
+    width: 0;
+    // @include span-columns(1 of 8);
     a {
       position: absolute;
       top: 24%;
@@ -85,9 +100,14 @@ $border-style : 1px solid $color-border;
       // -webkit-transform: rotate(45deg);
     }
   }
-  // .name {}
+
+  .name {
+    @include span-columns(4 of 4);
+  }
 
   .status {
+    @include span-columns(4 of 4);
+
     border-top: $border-style;
     border-right: $border-style;
 
@@ -108,6 +128,8 @@ $border-style : 1px solid $color-border;
   }
 
   .lease {
+    @include span-columns(8 of 8);
+
     background: whitesmoke;
     border-top: $border-style;
 
@@ -146,5 +168,85 @@ $border-style : 1px solid $color-border;
     margin: 0;
     padding: em(2);
     // text-align: center;
+  }
+}
+
+// ============
+
+.module--resident-details {
+  @extend .module--list-item;
+
+  background: $color-bg-gray;
+
+  .details {
+    @include span-columns(12);
+    // width: 100px;
+    // height: 400px;
+    border-top: $border-style;
+    background: white;
+  }
+}
+
+// ==========
+.ui--tab-section {
+
+  .tab-horizontal {
+    width: 100%;
+    @include pad(1em);
+
+    font-size: em(14);
+
+    ul {
+      // display: block;
+      border: $border-style;
+      @extend %radius;
+
+      overflow: hidden;
+
+      @include clearfix;
+    }
+
+    li {
+      display: block;
+      float: left;
+
+      width: 100/3 * 1%;
+      @include pad(.4em .2em);
+
+      text-align: center;
+      text-transform: capitalize;
+      color: $color-primary;
+
+      &+li {
+        // background: #000;
+        border-left: $border-style;
+      }
+
+      &.active {
+        color: black;
+        background: $color-bg-gray;
+      }
+
+      &:hover {
+        background: tint($color-bg-gray, 50%);
+      }
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .tab-content {
+    section {
+      display: none;
+
+      &.open {
+        display: block;
+      }
+    }
+
   }
 }

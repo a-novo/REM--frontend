@@ -80,6 +80,14 @@ body {
   @include clearfix;
 }
 
+.content--panel {
+  // width: 85%;
+  // float: left;
+  // @include outer-container;
+  @include pad(default);
+  // background: #ccc;
+}
+
 .content--panel-one {
   width: 15%;
   float: left;
@@ -94,6 +102,8 @@ body {
   @include pad(default);
   // background: #ccc;
 }
+
+// ====
 
 .module--a {
   width: 800px;
