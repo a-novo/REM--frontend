@@ -16,7 +16,7 @@
         <div class="content--panel">
           <!--     start       -->
           <div class="module module--resident-details">
-            <div id="name">
+            <div class="wrapper">
               <div class="top">
                 <div class="col name">
                   <p class="label">name</p>
@@ -45,72 +45,176 @@
               <div class="ui--tab-section">
                 <div class="tab-horizontal">
                   <ul class="">
-                    <li><a href="#">tab 1</a></li>
-                    <li><a href="#">tab 2</a></li>
-                    <li><a href="#">tab 3</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Lease Details</a></li>
+                    <li><a href="#">Personal Info</a></li>
                   </ul>
                 </div>
 
                 <div class="tab-content">
-                  <section id="">
+                  <section>
                     <form id="form_id" action="" method="">
                       <div class="row">
-                        <label for="">label 1a</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">User Name</label>
+                        <input type="text" name="some_name" value="johnyappleseed@me.com" disabled>
                       </div>
                       <div class="row">
-                        <label for="">label 2a</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">Password</label>
+                        <input type="text" name="some_name" value="******" disabled>
+                        <button class="button" name="button">Reset Password</button>
                       </div>
                       <div class="row">
-                        <label for="">label 3a</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">Notifications Preferences</label>
+
+                        <input id="c1" type="checkbox" name="some_name" value="email">
+                        <label for="c1"><span>&times;</span>Email</label>
+
+                        <input id="c2" type="checkbox" name="some_name" value="sms">
+                        <label for="c2"><span>&times;</span>SMS</label>
+
+                        <input id="c3" type="checkbox" name="some_name" value="voice">
+                        <label for="c3"><span>&times;</span>Voice</label>
+
+                      </div>
+                      <div class="row">
+                        <label for="">Account Activated</label>
+                        <input type="text" name="some_name" value="12/12/2012" disabled>
+                      </div>
+                      <div class="row">
+                        <button name="button">update</button>
+                        <input type="datetime"  value="timestampstuff" disabled>
                       </div>
                     </form>
                   </section>
-                  <section class="" id="">
+                  <section>
                     <form id="form_id" action="" method="">
                       <div class="row">
-                        <label for="">label 1b</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">Resident Status</label>
+                        <select>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                        <select>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
                       </div>
                       <div class="row">
-                        <label for="">label 2b</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">Unit</label>
+                        <select>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                        <button name="button">View Unit</button>
                       </div>
                       <div class="row">
-                        <label for="">label 3b</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">Common</label>
+                        <select>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                        <a href="#">Add Another Common</a>
+                        <button name="button">View Common</button>
+                      </div>
+                      <div class="row">
+                        <label for="">Lease</label>
+                        <select name="" id="">
+                          <option value="value-1">value 1</option>
+                          <option value="value-2">value 2</option>
+                          <option value="value-3">value 3</option>
+                          <option value="value-4">value 4</option>
+                          <option value="value-5">value 5</option>
+                          <option value="value-6">value 6</option>
+                          <option value="value-7">value 7</option>
+                          <option value="value-8">value 8</option>
+                        </select>
+                        <span>
+                          <input type="text" name="some_name" value="12/12/12">
+                          <span>to</span>
+                          <input type="text" name="some_name" value="12/12/14">
+                        </span>
+                      </div>
+                      <div class="row">
+                        <label for="">Rent</label>
+                        <input type="text" name="some_name" value="$1,200.00" disabled>
+                        <button name="button">Update Rent Ammount</button>
+                      </div>
+                      <div class="row">
+                        <button name="button">update</button>
+                        <input type="datetime"  value="timestampstuff" disabled>
                       </div>
                     </form>
                   </section>
-                  <section class="" id="">
+                  <section>
                     <form id="form_id" action="" method="">
                       <div class="row">
-                        <label for="">label 1c</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">Name</label>
+                        <input type="text" name="some_name" value="Name">
+                        <input type="text" name="some_name" value="Lastname">
                       </div>
                       <div class="row">
-                        <label for="">label 2c</label>
-                        <input type="text" name="some_name" value="">
+                        <label for="">Email</label>
+                        <input type="text" name="some_name" value="johnyappleseed@me.com">
                       </div>
                       <div class="row">
-                        <label for="">label 3c</label>
+                        <label for="">Phone</label>
                         <input type="text" name="some_name" value="">
+                        <select name="" id="">
+                          <option value="option-1">option 1</option>
+                          <option value="option-2">option 2</option>
+                          <option value="option-3">option 3</option>
+                          <option value="option-4">option 4</option>
+                          <option value="option-5">option 5</option>
+                          <option value="option-6">option 6</option>
+                        </select>
+                        <input type="radio" name="phone" value="primary">Primary
+                      </div>
+                      <div class="row">
+                        <label for="">Gender</label>
+                        <input type="radio" name="sex" value="male">Male
+                        <input type="radio" name="sex" value="female">Female
+                      </div>
+                      <div class="row">
+                        <label for="">DOB</label>
+                        <select name="" id="">
+                          <option value="option-1">option 1</option>
+                          <option value="option-2">option 2</option>
+                          <option value="option-3">option 3</option>
+                          <option value="option-4">option 4</option>
+                          <option value="option-5">option 5</option>
+                          <option value="option-6">option 6</option>
+                        </select>
+                        <select name="" id="">
+                          <option value="option-1">option 1</option>
+                          <option value="option-2">option 2</option>
+                          <option value="option-3">option 3</option>
+                          <option value="option-4">option 4</option>
+                          <option value="option-5">option 5</option>
+                          <option value="option-6">option 6</option>
+                        </select>
+                      </div>
+                      <div class="row">
+                        <button name="button">update</button>
+                        <input type="datetime"  value="timestampstuff" disabled>
                       </div>
                     </form>
                   </section>
+
                 </div>
               </div>
 
-              <a href="" class="button">udpate</a>
-              <button class="button" name="button">update</button>
             </div>
 
           </div>
           <!--      end      -->
-
-          <!-- @import partials/mod-resident-list-item -->
         </div>
       </div>
 

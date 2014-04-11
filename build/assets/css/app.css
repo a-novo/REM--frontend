@@ -390,6 +390,100 @@ ul {
 h1, .h1 {
   color: #000; }
 
+a {
+  color: #59c8e0;
+  height: 1em;
+  line-height: 1em;
+  font-size: 0.75em; }
+
+.button, button {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  line-height: normal;
+  font-size: 0.8125em;
+  padding: 0.375em 0.75em;
+  color: #59c8e0;
+  background: #f0f0f0;
+  border: 1px solid #cccccc; }
+  .button.disabled, button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+
+.row {
+  position: relative;
+  display: block; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+form .row {
+  padding: 1em;
+  border-bottom: 1px solid #cccccc; }
+  form .row:last-of-type {
+    border: none; }
+form label {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: 1.75em;
+  line-height: 1.75em;
+  font-size: 0.875em; }
+  form label:last-child {
+    margin-right: 0; }
+form input[type="text"] {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  form input[type="text"]:last-child {
+    margin-right: 0; }
+form input[type="checkbox"] {
+  display: none; }
+form input[type="checkbox"] + label {
+  width: auto; }
+form input[type="checkbox"] + label span {
+  display: inline-block;
+  float: none;
+  width: 1.125em;
+  height: 1.125em;
+  margin: -4px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 0.875em;
+  text-align: center;
+  border: 1px solid #cccccc;
+  background: #fff;
+  color: white; }
+form input[type="checkbox"]:checked + label span {
+  color: #59c8e0;
+  -webkit-background-clip: content-box;
+  background-clip: content-box; }
+form select {
+  float: left; }
+form span {
+  float: left; }
+form button {
+  float: right; }
+
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
+  height: 1.75em;
+  line-height: 1.75em;
+  border: 1px solid #cccccc;
+  font-size: 0.875em;
+  color: #000;
+  background: #fff; }
+  input[type="email"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="url"]:disabled, input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="time"]:disabled, input[type="week"]:disabled {
+    padding: 0;
+    border: none;
+    color: #7f7f7f; }
+
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus {
+  border-color: #7f7f7f;
+  outline: none; }
+
 html,
 body {
   width: 100%;
@@ -568,7 +662,7 @@ body {
       margin: 0 0.1875em;
       border-radius: 50%; }
 
-.ui--filter-tags span, .module--list-item, .module--resident-details, .ui--tab-section .tab-horizontal ul, .nav--button-drop-down .drop-down, .nav--search-field {
+.button, button, .ui--filter-tags span, .module--list-item, .module--resident-details, .ui--tab-section .tab-horizontal ul, .nav--button-drop-down .drop-down, .nav--search-field {
   border-radius: 5px;
   overflow: hidden; }
 
@@ -592,7 +686,7 @@ body {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .module--list-item #name, .module--resident-details #name {
+  .module--list-item .wrapper, .module--resident-details .wrapper {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -600,9 +694,9 @@ body {
     display: table;
     width: 100%;
     table-layout: fixed; }
-    .module--list-item #name:last-child, .module--resident-details #name:last-child {
+    .module--list-item .wrapper:last-child, .module--resident-details .wrapper:last-child {
       margin-right: 0; }
-    .module--list-item #name:after, .module--resident-details #name:after {
+    .module--list-item .wrapper:after, .module--resident-details .wrapper:after {
       content: "";
       display: table;
       clear: both; }
@@ -671,14 +765,22 @@ body {
     border-top: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
     margin: 0;
-    background: skyblue;
-    text-align: center; }
+    text-align: center;
+    background: whitesmoke; }
     .module--list-item .status:last-child, .module--resident-details .status:last-child {
       margin-right: 0; }
     .module--list-item .status a, .module--resident-details .status a {
+      font-size: 0.875em;
       display: block;
-      color: white;
-      text-decoration: none; }
+      height: 100%;
+      text-decoration: none;
+      background: skyblue; }
+    .module--list-item .status p, .module--resident-details .status p {
+      padding-top: 0.625em;
+      color: white; }
+    .module--list-item .status.active p, .module--resident-details .status.active p {
+      font-size: 0.75em;
+      color: #6f9c55; }
   .module--list-item .lease, .module--resident-details .lease {
     float: left;
     display: block;
@@ -690,6 +792,10 @@ body {
     color: #898989; }
     .module--list-item .lease:last-child, .module--resident-details .lease:last-child {
       margin-right: 0; }
+    .module--list-item .lease p, .module--resident-details .lease p {
+      padding-top: 0.5em;
+      padding-left: 0.75em;
+      font-size: 0.875em; }
   .module--list-item .building, .module--resident-details .building {
     float: left;
     display: block;
@@ -714,11 +820,9 @@ body {
 
 .module--list-item .status, .module--resident-details .status, .module--list-item .lease, .module--resident-details .lease {
   font-size: 0.875em;
-  padding: 0.25em;
   height: 2em; }
   .module--list-item .status p, .module--resident-details .status p, .module--list-item .lease p, .module--resident-details .lease p {
-    margin: 0;
-    padding: 0.125em; }
+    margin: 0; }
 
 .module--resident-details {
   background: #f0f0f0; }
@@ -761,6 +865,7 @@ body {
   .ui--tab-section .tab-horizontal a {
     display: block;
     text-decoration: none;
+    font-size: inherit;
     color: inherit; }
 .ui--tab-section .tab-content section {
   display: none; }

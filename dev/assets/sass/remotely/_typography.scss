@@ -13,3 +13,12 @@ ul {
 h1, .h1 {
   color: #000;
 }
+
+// TODO: global link styles
+
+a {
+  color: $color-accent;
+  height: em(16);
+  line-height: em(16);
+  font-size: em(12);
+}
