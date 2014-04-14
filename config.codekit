@@ -436,6 +436,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dev\/partials\/_mod-resident-detail-form.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/partials\/_mod-resident-detail-form.kit",
+		"outputAbbreviatedPath": "\/build\/partials\/_mod-resident-detail-form.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/dev\/partials\/_mod-resident-list-filters.kit": {
 		"fileType": 2048,
 		"ignore": 1,
