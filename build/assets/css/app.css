@@ -410,6 +410,21 @@ a {
     opacity: 0.5;
     cursor: not-allowed; }
 
+.button--primary {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  line-height: normal;
+  font-size: 0.8125em;
+  padding: 0.375em 0.75em;
+  color: #FFF;
+  background: #59c8e0;
+  padding: 0.5em 1.25em 0.625em 1.25em;
+  font-size: 1em; }
+  .button--primary.disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+
 .row {
   position: relative;
   display: block; }
@@ -417,6 +432,9 @@ a {
     content: "";
     display: table;
     clear: both; }
+
+.form--submit {
+  margin-top: 6.25em; }
 
 form .row {
   padding: 1em;
@@ -461,8 +479,12 @@ form input[type="checkbox"]:checked + label span {
   color: #59c8e0;
   -webkit-background-clip: content-box;
   background-clip: content-box; }
+form input[type="radio"] + span {
+  float: none;
+  margin: 0 0.75em 0 0.0625em; }
 form select {
-  float: left; }
+  float: left;
+  margin-right: 2.35765%; }
 form span {
   float: left; }
 form button {
@@ -471,12 +493,12 @@ form button {
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
   height: 1.75em;
   line-height: 1.75em;
+  padding: 0 0.375em;
   border: 1px solid #cccccc;
   font-size: 0.875em;
   color: #000;
   background: #fff; }
   input[type="email"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="url"]:disabled, input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="time"]:disabled, input[type="week"]:disabled {
-    padding: 0;
     border: none;
     color: #7f7f7f; }
 
@@ -662,7 +684,7 @@ body {
       margin: 0 0.1875em;
       border-radius: 50%; }
 
-.button, button, .ui--filter-tags span, .module--list-item, .module--resident-details, .ui--tab-section .tab-horizontal ul, .nav--button-drop-down .drop-down, .nav--search-field {
+.button, button, .button--primary, .ui--filter-tags span, .module--list-item, .module--resident-details, .ui--tab-section .tab-horizontal ul, .nav--button-drop-down .drop-down, .nav--search-field {
   border-radius: 5px;
   overflow: hidden; }
 

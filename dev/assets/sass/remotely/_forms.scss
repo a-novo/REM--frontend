@@ -1,4 +1,6 @@
 // forms and inputs
+
+// global button mixin
 @mixin remotely-button ($style: primary, $size: medium, $text-size: inherit, $padding: 7px 18px) {
 
   text-decoration: none;
@@ -42,6 +44,13 @@
     border: $border-style;
   }
 
+  @if $size == large {
+    padding: em(8) em(20) em(10) em(20);
+    font-size: em(16);
+    // color: #FFF;
+    // background: $color-accent;
+  }
+
 }
 
 // ======
@@ -50,9 +59,19 @@
   @include remotely-button(secondary);
 }
 
+.button--primary {
+  @include remotely-button(primary, large);
+}
+
+//
+
 .row {
   position: relative;
   @include row(block);
+}
+
+.form--submit {
+  margin-top: em(100);
 }
 
 form {
@@ -79,6 +98,8 @@ form {
   input[type="text"] {
     @include span-columns(3);
   }
+
+// checkboxes
 
   input[type="checkbox"] {
     display:none;
@@ -110,9 +131,20 @@ form {
     background-clip:content-box;
   }
 
+  // radio buttons
+
+  input[type="radio"] + span {
+    float: none;
+    margin: 0 em(12) 0 em(1);
+  }
+
+  //
+
   select {
     float: left;
+    margin-right: flex-gutter();
   }
+
   span {
     float: left;
   }
@@ -128,6 +160,7 @@ form {
   height: em(28);
   line-height: em(28);
 
+  padding: 0 em(6);
   border: $border-style;
 
   font-size: em(14);
@@ -135,7 +168,7 @@ form {
   background: #fff;
 
   &:disabled {
-    padding: 0;
+    // padding: 0;
     border: none;
     color: tint(black, 50%);
   }
