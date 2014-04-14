@@ -87,30 +87,80 @@ Number.prototype.clamp = function(min, max) {
 
 var updateTop;
 var myFunc = function (argument) {
-  // body...
-  var filterObj       = $('.module--f');
-  var filterContainer = filterObj.parent();
-  var targetWidth     = filterContainer.width();
-  var targetPos       = filterContainer.offset();
+  var $filterObj = $('.module--f');
 
-  console.log(targetWidth, targetPos);
+  if ($filterObj.length) {
+    var filterContainer = $filterObj.parent();
+    var targetWidth     = filterContainer.width();
+    var targetPos       = filterContainer.offset();
 
-  filterObj.css({
-    width: targetWidth,
-    position: 'fixed'
-  });
+    console.log(targetWidth, targetPos);
+
+    $filterObj.css({
+      width: targetWidth,
+      position: 'fixed'
+    });
+
+  }
 
   updateTop = function () {
-    // body...
-    var targetTop = (targetPos.top - scrollPos).clamp(0, targetPos.top);
-    console.log(targetTop);
+    if ($filterObj.length) {
+      var targetTop = (targetPos.top - scrollPos).clamp(0, targetPos.top);
+      console.log(targetTop);
 
-    filterObj.css({top: targetTop + 'px'});
+      $filterObj.css({top: targetTop + 'px'});
+    }
   };
 
 };
 myFunc();
 
+// TODO:
+// ui tab scripts
+
+var uiTabSection = function (argument) {
+  var module = $('.ui--tab-section');
+  if (module.length) {
+    module.each(function (index) {
+
+      var $tabs = $(this).find('ul > li');
+      var $sections = $(this).find('section');
+
+      $tabs.first().addClass('active');
+      $sections.first().addClass('open');
+
+      $tabs.children('a').each(function(index) {
+        $(this).on('click', function () {
+          var $this = $(this);
+
+          if (!$this.parent().hasClass('active')) {
+            event.preventDefault();
+            var tabIndex = index;
+
+            $tabs.removeClass('active');
+            $this.parent().addClass('active');
+
+            $sections.each(function (index) {
+              var $this = $(this);
+              var sectionIndex = index;
+
+              if (sectionIndex === tabIndex) {
+                $this.addClass('open');
+              } else {
+                $this.removeClass('open');
+              }
+            });
+          } else {
+            event.preventDefault();
+          }
+
+        });
+      });
+
+    });
+  }
+};
+uiTabSection();
 
 // TODO:
 // betterify this function at some point

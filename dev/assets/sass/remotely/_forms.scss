@@ -1,0 +1,185 @@
+// forms and inputs
+
+// global button mixin
+@mixin remotely-button ($style: primary, $size: medium, $text-size: inherit, $padding: 7px 18px) {
+
+  text-decoration: none;
+  color: inherit;
+
+  @if type-of($style) == string and type-of($size) == string {
+    $padding: $text-size;
+    $base-color: #FFF;
+    // $text-size: $base-color;
+
+    @if $padding == inherit {
+      $padding: 7px 18px;
+    }
+
+    @include buttonstyle($style, $size);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+}
+
+@mixin buttonstyle($style, $size) {
+  @extend %radius;
+  border: none;
+  // background: $color-accent;
+  line-height: normal;
+  font-size: em(13);
+  padding: em(6) em(12);
+
+  @if $style == primary {
+    color: #FFF;
+    background: $color-accent;
+  }
+
+  @if $style == secondary {
+    color: $color-accent;
+    background: $color-bg-gray;
+    border: $border-style;
+  }
+
+  @if $size == large {
+    padding: em(8) em(20) em(10) em(20);
+    font-size: em(16);
+    // color: #FFF;
+    // background: $color-accent;
+  }
+
+}
+
+// ======
+
+.button, button {
+  @include remotely-button(secondary);
+}
+
+.button--primary {
+  @include remotely-button(primary, large);
+}
+
+//
+
+.row {
+  position: relative;
+  @include row(block);
+}
+
+.form--submit {
+  margin-top: em(100);
+}
+
+form {
+  // @include outer-container;
+ .row {
+    padding:em(16);
+    // height: em(56);
+    border-bottom: $border-style;
+
+    &:last-of-type {
+      border: none;
+    }
+ }
+
+  label {
+    @include span-columns(3);
+
+    height: em(28);
+    line-height: em(28);
+
+    font-size: em(14);
+  }
+
+  input[type="text"] {
+    @include span-columns(3);
+  }
+
+// checkboxes
+
+  input[type="checkbox"] {
+    display:none;
+  }
+  input[type="checkbox"] + label {
+    width: auto;
+  }
+  input[type="checkbox"] + label span {
+    display:inline-block;
+    float: none;
+
+    width:em(18);
+    height:em(18);
+
+    margin: -4px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    // padding: em(5);
+    line-height:em(14);
+    text-align: center;
+    border: $border-style;
+    background: #fff;
+    color: #fff
+  }
+  input[type="checkbox"]:checked + label span {
+    // background:url(check_radio_sheet.png) -19px top no-repeat;
+    color: $color-accent;
+    // background: $color-accent;
+    background-clip:content-box;
+  }
+
+  // radio buttons
+
+  input[type="radio"] + span {
+    float: none;
+    margin: 0 em(12) 0 em(1);
+  }
+
+  //
+
+  select {
+    float: left;
+    margin-right: flex-gutter();
+  }
+
+  span {
+    float: left;
+  }
+
+  button {
+    float: right;
+  }
+
+}
+
+#{$all-text-inputs} {
+
+  height: em(28);
+  line-height: em(28);
+
+  padding: 0 em(6);
+  border: $border-style;
+
+  font-size: em(14);
+  color: #000;
+  background: #fff;
+
+  &:disabled {
+    // padding: 0;
+    border: none;
+    color: tint(black, 50%);
+  }
+}
+
+#{$all-text-inputs-hover} { // Target the :hover pseudo-class
+  // background: yellow;
+}
+
+#{$all-text-inputs-focus} { // Target the :focus pseudo-class
+  // background: white;
+  border-color: tint(#000, 50%);
+  outline: none;
+}

@@ -8,4 +8,10 @@ $color-accent-dark     : darken($color-accent, 50%); // blue dark
 $color-success    : #6f9c55; // green
 $color-error      : #000; // red
 
+$color-bg-gray    : #F0F0F0;
 $color-border     : #ccc;
+
+// TODO:
+// move these somewhere else
+// other styles
+$border-style : 1px solid $color-border;
