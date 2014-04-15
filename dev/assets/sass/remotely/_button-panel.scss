@@ -1,0 +1,70 @@
+.content--panel {
+  .wrapper--button-panel {
+    @include span-columns(6);
+    float: none;
+    margin: auto;
+    margin-bottom: flex-gutter();
+
+    @include clearfix();
+  }
+}
+
+.module--button-panel {
+  @include span-columns(3 of 6);
+  margin-bottom: 0;
+
+  &:last-of-type {
+    @include omega();
+  }
+  &:hover {
+    border-color: $color-accent;
+  }
+
+  height: auto;
+  position: relative;
+  // padding-top: 100%;
+  .inner {
+    display: block;
+    height: 0;
+    width: 100%;
+    padding-top: 100%;
+  }
+  a {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    // padding-top: 100%;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      // background: tint($color-accent, 80%);
+      background: tint($color-accent, 0%);
+      .icon { fill: white; }
+      .label { color: white; }
+    }
+  }
+  .icon-box {
+    height: 60%;
+    padding-top: em(50);
+  }
+  .icon {
+    display: block;
+
+    width: em(120);
+
+    margin: 0 auto;
+
+    fill: $color-accent;
+  }
+  .label {
+    margin: 0;
+    font-size: em(20);
+    color: $color-accent;
+  }
+
+}

@@ -41,3 +41,7 @@ Thumbs.db
 **/.sass-cache/**
 **/node_modules/**
 node_modules/**
+
+*.scssc
+*.map
+

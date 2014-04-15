@@ -6,10 +6,14 @@ $color-accent-dark     : darken($color-accent, 50%); // blue dark
 // $color-accent          : #59c8e0; // blue medium
 
 $color-success    : #6f9c55; // green
-$color-error      : #000; // red
+$color-error      : #de2a20; // red
+$color-warning    : #e5bb4c; // yellow
+$color-info       : #4c90e5; // blue
 
 $color-bg-gray    : #F0F0F0;
 $color-border     : #ccc;
+
+$color-disabled   : tint(black, 50%); //gray
 
 // TODO:
 // move these somewhere else

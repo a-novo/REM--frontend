@@ -1,0 +1,57 @@
+.alert-box {
+  position: relative;
+  width: 100%;
+  @include pad(1em default);
+
+  @include ellipsis();
+  text-align: center;
+  font-size: em(13);
+  
+  color: tint(black, 30%);
+
+  .close {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    margin: auto;
+    @include pad(0 1em);
+
+    height: em(18);
+
+    font-size: em(24);
+    text-decoration: none;
+
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1.0;
+    }
+  }
+
+  &--success {
+    background: tint($color-success, 90%);
+    border-color: tint($color-success, 50%);
+
+    .close { color: $color-success;}
+  }
+  &--error {
+    background: tint($color-error, 90%);
+    border-color: tint($color-error, 50%);
+
+    .close { color: $color-error;}
+  }
+  &--warning {
+    background: tint($color-warning, 90%);
+    border-color: tint($color-warning, 50%);
+
+    .close { color: $color-warning;}
+  }
+  &--info {
+    background: tint($color-info, 90%);
+    border-color: tint($color-info, 50%);
+
+    .close { color: $color-info;}
+  }
+}

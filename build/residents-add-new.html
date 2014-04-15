@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Residents</title>
+    <title>Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/vendor/modernizr-2.7.1.min.js"></script>
   </head>
-  <body data-page="residents-list">
+  <body data-page="residents-add-new">
     <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -175,208 +175,75 @@
 
       <div class="content" id="content">
         <div class="content--panel">
-          <div class="module module--resident-details">
-  <div class="wrapper">
 
-    <div class="top">
-      <div class="col name">
-        <p class="label">name</p>
-        <h1 class="value">Johnny Appleseed</h1>
-      </div>
-    </div>
+          <div class="module alert-box alert-box--success">
+            Success message goes here: Yay, you're the best!
+            <a href="#" class="close">&times;</a>
+          </div>
+          <div class="module alert-box alert-box--error">
+            Error message goes here: Nope, you suck.
+            <a href="#" class="close">&times;</a>
+          </div>
+          <div class="module alert-box alert-box--warning">
+            Warning message goes here: Wait, watch it…
+            <a href="#" class="close">&times;</a>
+          </div>
+          <div class="module alert-box alert-box--info">
+            Info message goes here: Hey listen, did you know penguins don't fly?
+            <a href="#" class="close">&times;</a>
+          </div>
 
-    <div class="bottom">
-      <div class="col building">
-        <p class="label">building</p>
-        <h1 class="value">Red House</h1>
-      </div>
-      <div class="col unit">
-        <p class="label">unit</p>
-        <h1 class="value">666</h1>
-      </div>
-      <div class="col automation">
-        <p class="label">Home Automation</p>
-        <h1 class="value">66 Devices</h1>
-      </div>
-    </div>
-  </div>
+          <div class="wrapper--button-panel">
 
-  <div class="details">
-    <div class="ui--tab-section">
+            <div class="module module--button-panel">
+              <div class="inner">
+                <a class="anchor" href="#">
+                  <div class="icon-box">
+                    <svg viewBox="0 0 100 100" class="icon icon--stroke icon--resident-list-stroke"><use xlink:href="#svg-icon-11"></use></svg>
+                  </div>
+                  <p class="label">Add Resident</p>
+                </a>
+              </div>
+            </div>
+            <div class="module module--button-panel">
+              <div class="inner">
+                <a class="anchor" href="#">
+                  <div class="icon-box">
+                    <svg viewBox="0 0 100 100" class="icon icon--stroke icon--resident-list-stroke"><use xlink:href="#svg-icon-12"></use></svg>
+                  </div>
+                  <p class="label">Upload Residents</p>
+                </a>
+              </div>
+            </div>
 
-      <div class="tab-horizontal">
-        <ul class="">
-          <li><a href="#">Account Settings</a></li>
-          <li><a href="#">Lease Details</a></li>
-          <li><a href="#">Personal Info</a></li>
-        </ul>
-      </div>
+          </div>
 
-      <div class="tab-content">
-        <section>
-          <form id="form_id" action="" method="">
-            <div class="row">
-              <label for="">User Name</label>
-              <input type="text" name="some_name" value="johnyappleseed@me.com" disabled>
-            </div>
-            <div class="row">
-              <label for="">Password</label>
-              <input type="text" name="some_name" value="******" disabled>
-              <button class="button" name="button">Reset Password</button>
-            </div>
-            <div class="row">
-              <label for="">Notifications Preferences</label>
+            <table class="module module--table">
+              <tbody>
+                <tr>
+                  <th>Header Cell 1</th>
+                  <td>Row 1 Cell 2</td>
+                  <td><input class="timestamp" type="datetime" value="timestampstuff" disabled></td>
+                </tr>
+                <tr>
+                  <th>Header Cell 1</th>
+                  <td>Row 2 Cell 2</td>
+                  <td><input class="timestamp" type="datetime" value="timestampstuff" disabled></td>
+                </tr>
+                <tr>
+                  <th>Header Cell 1</th>
+                  <td>Row 3 Cell 2</td>
+                  <td><input class="timestamp" type="datetime" value="timestampstuff" disabled></td>
+                </tr>
+                <tr>
+                  <th>Header Cell 1</th>
+                  <td>Row 4 Cell 2</td>
+                  <td><input class="timestamp" type="datetime" value="timestampstuff" disabled></td>
+                </tr>
+              </tbody>
+            </table>
 
-              <input id="c1" type="checkbox" name="some_name" value="email">
-              <label for="c1"><span>&times;</span>Email</label>
 
-              <input id="c2" type="checkbox" name="some_name" value="sms">
-              <label for="c2"><span>&times;</span>SMS</label>
-
-              <input id="c3" type="checkbox" name="some_name" value="voice">
-              <label for="c3"><span>&times;</span>Voice</label>
-
-            </div>
-            <div class="row">
-              <label for="">Account Activated</label>
-              <input type="text" name="some_name" value="12/12/2012" disabled>
-            </div>
-            <div class="row form--submit">
-              <button class="button--primary" name="button">update</button>
-              <input class="timestamp" type="datetime"  value="timestampstuff" disabled>
-            </div>
-          </form>
-        </section>
-        <section>
-          <form id="form_id" action="" method="">
-            <div class="row">
-              <label for="">Resident Status</label>
-              <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-              <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-            <div class="row">
-              <label for="">Unit</label>
-              <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-              <button name="button">View Unit</button>
-            </div>
-            <div class="row">
-              <label for="">Common</label>
-              <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-              <a href="#">Add Another Common</a>
-              <button name="button">View Common</button>
-            </div>
-            <div class="row">
-              <label for="">Lease</label>
-              <select name="" id="">
-                <option value="value-1">value 1</option>
-                <option value="value-2">value 2</option>
-                <option value="value-3">value 3</option>
-                <option value="value-4">value 4</option>
-                <option value="value-5">value 5</option>
-                <option value="value-6">value 6</option>
-                <option value="value-7">value 7</option>
-                <option value="value-8">value 8</option>
-              </select>
-              <span>
-                <input type="text" name="some_name" value="12/12/12">
-                <span>to</span>
-                <input type="text" name="some_name" value="12/12/14">
-              </span>
-            </div>
-            <div class="row">
-              <label for="">Rent</label>
-              <input type="text" name="some_name" value="$1,200.00" disabled>
-              <button name="button">Update Rent Ammount</button>
-            </div>
-            <div class="row form--submit">
-              <button class="button--primary" name="butto">update</button>
-              <input class="timestamp" type="datetime"  value="timestampstuff" disabled>
-            </div>
-          </form>
-        </section>
-        <section>
-          <form id="form_id" action="" method="">
-            <div class="row">
-              <label for="">Name</label>
-              <input type="text" name="some_name" value="Name">
-              <input type="text" name="some_name" value="Lastname">
-            </div>
-            <div class="row">
-              <label for="">Email</label>
-              <input type="text" name="some_name" value="johnyappleseed@me.com">
-            </div>
-            <div class="row">
-              <label for="">Phone</label>
-              <input type="text" name="some_name" value="">
-              <select name="" id="">
-                <option value="option-1">option 1</option>
-                <option value="option-2">option 2</option>
-                <option value="option-3">option 3</option>
-                <option value="option-4">option 4</option>
-                <option value="option-5">option 5</option>
-                <option value="option-6">option 6</option>
-              </select>
-              <input type="radio" name="phone" value="primary">
-              <span>Primary</span>
-            </div>
-            <div class="row">
-              <label for="">Gender</label>
-              <input type="radio" name="sex" value="male">
-              <span>Male</span>
-              <input type="radio" name="sex" value="female">
-              <span>Female</span>
-            </div>
-            <div class="row">
-              <label for="">DOB</label>
-              <select name="" id="">
-                <option value="option-1">option 1</option>
-                <option value="option-2">option 2</option>
-                <option value="option-3">option 3</option>
-                <option value="option-4">option 4</option>
-                <option value="option-5">option 5</option>
-                <option value="option-6">option 6</option>
-              </select>
-              <select name="" id="">
-                <option value="option-1">option 1</option>
-                <option value="option-2">option 2</option>
-                <option value="option-3">option 3</option>
-                <option value="option-4">option 4</option>
-                <option value="option-5">option 5</option>
-                <option value="option-6">option 6</option>
-              </select>
-            </div>
-            <div class="row form--submit">
-              <button class="button--primary" name="button">update</button>
-              <input class="timestamp" type="datetime" value="timestampstuff" disabled>
-            </div>
-          </form>
-        </section>
-
-      </div>
-    </div>
-
-  </div>
-</div>
         </div>
       </div>
 
