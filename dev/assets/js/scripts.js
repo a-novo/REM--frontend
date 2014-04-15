@@ -201,14 +201,54 @@ var sideNavTooltip = function () {
     // e.preventDefault();
     $(this).clickHandler();
   });
-
   // console.log(currentPage);
-  console.log(navLinks.eq(1));
-
+  // console.log(navLinks.eq(1));
 };
 // init
 sideNavTooltip();
 
+//
+//
+var namespace = {
+  // init: function () {
+  //   // body...
+  //   var self = this;
+  //   for (var x in self) {
+  //     self[x]();
+  //     console.log(self[x]);
+  //   }
+  //   console.log(self);
+  // }
+};
 
+namespace.a = function (argument) {
+  console.log('test a');
+};
+namespace.b = function (argument) {
+  console.log('test b');
+};
+namespace.c = function (argument) {
+  console.log('test c');
+};
+
+// function runFn(i, fn) {
+  // fn();
+// }
+
+// $.each(namespace, runFn);
+
+// or…
+var init = function (target) {
+  for (var x in target) {
+    target[x]();
+    console.log(target[x]);
+  }
+};
+
+$window.on('ready statechangecomplete', function () {
+  // $.each(namespace, runFn);
+  init(namespace);
+  // namespace.init();
+});
 
 }(this, this.document, this.jQuery)); // in global scope, this === window
