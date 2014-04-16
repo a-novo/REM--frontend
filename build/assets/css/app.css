@@ -843,6 +843,7 @@ body {
   text-decoration: none;
   color: inherit;
   border: none;
+  height: auto;
   line-height: normal;
   font-size: 0.8125em;
   padding: 0.375em 0.75em;
@@ -857,6 +858,7 @@ body {
   text-decoration: none;
   color: inherit;
   border: none;
+  height: auto;
   line-height: normal;
   font-size: 0.8125em;
   padding: 0.375em 0.75em;
@@ -930,7 +932,8 @@ form select {
   margin-right: 2.35765%; }
 form span {
   float: left; }
-form button {
+form button,
+form .button {
   float: right; }
 
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
@@ -1087,6 +1090,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
     text-decoration: none;
     color: inherit;
     border: none;
+    height: auto;
     line-height: normal;
     font-size: 0.8125em;
     padding: 0.375em 0.75em;
