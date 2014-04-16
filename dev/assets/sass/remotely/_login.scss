@@ -1,0 +1,122 @@
+.icon-box {
+  @include size(100%);
+}
+
+.page--container-login {
+  // position: relative;
+  min-height: 100%;
+  background: $color-bg-gray;
+  // overflow: hidden;
+@include clearfix;
+}
+
+.logo--login {
+  height: em(220);
+
+  margin: 0 auto;
+  @include pad();
+  padding-top: em(40);
+
+  .icon { fill: $color-primary; }
+}
+
+.module--login {
+  @include span-columns(4);
+  @include omega();
+  // @include pad(1em);
+  float: none;
+  // height: em(200);
+  min-width: em(300);
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // right: 0;
+  // left: 0;
+  border: none;
+  margin: auto;
+
+  // background: white;
+
+  &:last-child {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  form {
+    display: block;
+    @include clearfix();
+    border: $border-style;
+    @include pad(1em);
+    background: white;
+    @extend %radius;
+
+    label {
+      color: shade($color-border, 50%);
+      text-transform: uppercase;
+    }
+
+    input {
+      padding: em(22) em(8);
+      @extend %radius;
+      width: 100%;
+      float: none;
+      margin-bottom: em(16);
+
+      &:focus {
+        border-color: $color-accent;
+      }
+      &.error {
+        border-color: $color-error;
+      }
+    }
+  }
+
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .button {
+    @include remotely-button(primary, large);
+    width: 100%;
+    margin-top: em(12);
+    padding: em(12);
+  }
+
+  p {
+    text-align: left;
+    font-size: em(14);
+    color: shade($color-border, 20%);
+    // display: block;
+    @include pad();
+    // @include span-columns(4);
+  }
+  a {
+    padding-top: em(8);
+    text-decoration: none;
+    float: right;
+  }
+}
+
+.copyright {
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: $border-style;
+  background: tint($color-border, 20%);
+  height: em(100);
+  span {
+    @include pad(1em);
+    color: shade($color-border, 25%);
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  p, a{
+    display: inline;
+    font-size: em(12);
+    color: shade($color-border, 25%);
+    text-decoration: none;
+  }
+}

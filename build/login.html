@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Residents</title>
+    <title>Login</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -109,90 +109,40 @@
 			c-1.4,0-2.4,1.1-2.6,2.7H73.6z"></path> </g> <g> <path d="M79,80.8h2.3v14H79V80.8z"></path> </g> <g> <path d="M84.7,97.3l0.8-1.7c0.4,0.2,0.9,0.4,1.4,0.4c0.7,0,1.1-0.3,1.4-1.2L84,84.6h2.5l2.9,7.5l2.6-7.5h2.4l-4,10.4
 			c-0.8,2.1-1.7,2.8-3.3,2.8C86.1,97.9,85.4,97.7,84.7,97.3z"></path> </g> </g> </defs></svg>
 
-  <div class="page--container">
-    <nav class="nav--global" id="nav--global">
-  <div class="nav--button-tabs">
-    <ul class="">
-      <li class="active"><a href="#">Community</a></li>
-      <li><a href="#">Residents</a></li>
-      <li><a href="#">Payments</a></li>
-      <li><a href="#">Maintenance</a></li>
-      <li><a href="#">Announcements</a></li>
-    </ul>
+<div class="page--container-login">
+  <div class="logo--login">
+    <div class="icon-box">
+      <svg viewBox="0 0 100 100" class="icon "><use xlink:href="#svg-icon-13"></use></svg>
+    </div>
   </div>
 
-  <div id="inbox" class="nav--button-drop-down inbox">
-    <a class="anchor" href="#">Inbox</a>
-    <ul class="drop-down">
-      <li><a href="#">inbox 1</a></li>
-      <li><a href="#">inbox 2</a></li>
-      <li><a href="#">inbox 3</a></li>
-      <li><a href="#">inbox 4</a></li>
-    </ul>
-  </div>
+  <div class="module module--login">
 
-  <div id="settings" class="nav--button-drop-down settings">
-    <a class="anchor" href="#">Settings</a>
-    <ul class="drop-down">
-      <li><a href="#">setting 1 setting 1</a></li>
-      <li><a href="#">setting 2</a></li>
-      <li><a href="#">setting 3</a></li>
-      <li><a href="#">setting 4</a></li>
-    </ul>
-  </div>
-
-</nav>
-
-    <div class="page--content">
-      <div class="nav--local" id="nav--local">
-  <div class="nav--local-community-label">
-    <a class="" href="#">Community Name</a>
-  </div>
-  <ul>
-    <span class="nav--local-tooltip"></span>
-    <li>
-      <a class="anchor" href="residents-dashboard.html" data-page="residents-dashboard">
-        <div class="icon-box">
-          <svg viewBox="0 0 100 100" class="icon icon--stroke icon--resident-list-stroke"><use xlink:href="#svg-icon-03"></use></svg>
-          <svg viewBox="0 0 100 100" class="icon icon--filled icon--resident-list-filled"><use xlink:href="#svg-icon-04"></use></svg>
-        </div>
-        <p class="label">Dashboard</p>
-      </a>
-    </li>
-    <li>
-      <a class="anchor" href="residents-list.html" data-page="residents-list">
-        <div class="icon-box">
-          <svg viewBox="0 0 100 100" class="icon icon--stroke icon--resident-list-stroke"><use xlink:href="#svg-icon-01"></use></svg>
-          <svg viewBox="0 0 100 100" class="icon icon--filled icon--resident-list-filled"><use xlink:href="#svg-icon-02"></use></svg>
-        </div>
-        <p class="label">Resident's List</p>
-      </a>
-    </li>
-    <li>
-      <a class="anchor" href="residents-add-new.html" data-page="residents-add-new">
-        <div class="icon-box">
-          <svg viewBox="0 0 100 100" class="icon icon--stroke icon--resident-list-stroke"><use xlink:href="#svg-icon-09"></use></svg>
-          <svg viewBox="0 0 100 100" class="icon icon--filled icon--resident-list-filled"><use xlink:href="#svg-icon-10"></use></svg>
-        </div>
-        <p class="label">Add Residents</p>
-      </a>
-    </li>
-  </ul>
-</div>
-      <div class="nav--search">
-        <input class="nav--search-field" type="text" name="search" value="search">
-      </div>
-
-      <div class="content" id="content">
-        <div class="content--panel-one">
-        </div>
-        <div class="content--panel-two">
-        </div>
-      </div>
-
+    <div class="module alert-box alert-box--error">
+      Error message goes here: Nope, you suck.
+      <a href="#" class="close">&times;</a>
     </div>
 
+    <form class="">
+      <fieldset class="">
+          <label for="">Username</label>
+          <input type="text">
+          <label for="">Password</label>
+          <a href="#">Reset Password</a>
+          <input type="text">
+      </fieldset>
+      <button type="submit" class="button">Sign in</button>
+    </form>
+    <p>Remotely is an innovative home automation solution for the rental industry.</p>
   </div>
+</div>
+<div class="copyright">
+  <span>
+    <p>Copyright @ Remotely 2014</p> |
+    <a href="#">Term and Conditions</a> |
+    <a href="#">Privacy Policy</a>
+  </span>
+</div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
