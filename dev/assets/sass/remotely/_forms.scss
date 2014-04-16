@@ -28,6 +28,7 @@
 @mixin buttonstyle($style, $size) {
   @extend %radius;
   border: none;
+  height: auto;
   // background: $color-accent;
   line-height: normal;
   font-size: em(13);
@@ -149,7 +150,8 @@ form {
     float: left;
   }
 
-  button {
+  button,
+  .button, {
     float: right;
   }
 
